@@ -23,6 +23,7 @@ set DST_DIR=./
 protoc -I=%SRC_DIR% --cpp_out=%DST_DIR% %SRC_DIR%/lm.helloworld.proto
 ```
 Then you will get two files, `lm.helloworld.pb.h` and `lm.helloworld.pb.cc`.
+
 3. Create a cpp file with `main()` function, like this
 ```cpp
 #include "lm.helloworld.pb.h"
