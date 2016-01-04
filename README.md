@@ -16,7 +16,6 @@ message helloworld // corresponding to class in C/C++
 	optional int32     opt = 3;  //optional field 
 }
 ```
-
 2. Using `protoc.exe` to compile it, with command
 ```bash
 set SRC_DIR=./
@@ -24,7 +23,6 @@ set DST_DIR=./
 protoc -I=%SRC_DIR% --cpp_out=%DST_DIR% %SRC_DIR%/lm.helloworld.proto
 ```
 Then you will get two files, `lm.helloworld.pb.h` and `lm.helloworld.pb.cc`.
-
 3. Create a cpp file with `main()` function, like this
 ```cpp
 #include "lm.helloworld.pb.h"
@@ -72,7 +70,6 @@ int main(void)
 	reader();
 }
 ```
-
 4. Create a solution with the following `CMakeLists.txt`, configure it and generate the solution. Finally build the solution and get the result.
 ```cmake
 cmake_minimum_required(VERSION 2.9)
